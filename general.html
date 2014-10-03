@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TVIDI Información</title>
+
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="tvidiApp">
+
+<div class="container" ng-controller="GeneralController">
+    <div class="page-header">
+        <h1>Hotel {{salas.nombreHotel}}</h1>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>Sala</th>
+            <th>Cliente</th>
+            <th>Reunión</th>
+        </tr>
+        <tr ng-repeat="sala in hotel.salas">
+            <td>{{ sala.nombreSala  }}</td>
+            <td>{{ sala.cliente }}</td>
+            <td>{{ sala.reunion }}</td>
+        </tr>
+    </table>
+
+
+    <div class="footer">
+        <div class="container">
+            <p class="text-muted">created by yuido.com</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="./app/app.js"></script>
+
+</body>
+</html>
