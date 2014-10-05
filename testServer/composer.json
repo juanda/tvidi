@@ -1,0 +1,13 @@
+{
+    "name": "juanda/test-server",
+    "description": "Test server for tvidi client",
+    "authors": [
+        {
+            "name": "Juan David Rodríguez",
+            "email": "juandalibaba@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/routing": "2.5.*"
+    }
+}

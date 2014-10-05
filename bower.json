@@ -1,0 +1,31 @@
+{
+  "name": "tvidi",
+  "version": "0.0.1",
+  "homepage": "https://github.com/juanda/tvidi",
+  "authors": [
+    "Juan David Rodríguez <juandalibaba@gmail.com>"
+  ],
+  "description": "tvidi meeting rooms player",
+  "main": "app.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "tvidi",
+    "angular"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.26",
+    "bootstrap": "~3.2.0",
+    "angular-local-storage": "~0.1.0"
+  }
+}
