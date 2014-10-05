@@ -73,9 +73,9 @@ tvidiApp.controller('GeneralController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
 
-        $scope.salas = {
+        $scope.data = {
             error: false,
-            nombreHotel: "kuku"
+            nombreHotel: ""
         };
 
         $scope.getSalas = function(){
@@ -83,11 +83,49 @@ tvidiApp.controller('GeneralController', [
             var url     = apiUrl + '/salas/' + apiKey + '/' + idHotel
             $http.get(url)
                 .success(function (data) {
-                    $scope.salas = data;
+                    $scope.data = data;
                 })
                 .error(function () {
-                    $scope.salas = {error: true, message: "Error al acceder al servidor"}
+                    $scope.data = {error: true, message: e.message}
                 });
         }
+
+        $scope.getSalas();
+    }
+]);
+
+tvidiApp.controller('SalaController', [
+    '$scope',
+    '$window',
+    '$http',
+    'localStorageService',
+    function($scope, $window, $http, $localStorageService){
+
+        $scope.settings = $localStorageService.get('settings');
+
+        var apiUrl  = $scope.settings.apiUrl;
+        var apiKey  = $scope.settings.apiKey;
+        var idHotel = $scope.settings.idHotel;
+        var idSala  = $scope.settings.idSala;
+
+        $scope.data = {
+            error: false,
+            nombre: ""
+        };
+
+        $scope.getDatosSala = function () {
+            var url     = apiUrl + '/sala/' + apiKey + '/' + idHotel + '/' + idSala;
+
+            $http.get(url)
+                .success(function(data){
+                    $scope.sala = data;
+                })
+                .error(function(e){
+                    $scope.sala = {error: true,message: e.message}
+
+                });
+        }
+
+        $scope.getDatosSala();
     }
 ]);

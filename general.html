@@ -20,19 +20,23 @@
 
 <div class="container" ng-controller="GeneralController">
     <div class="page-header">
-        <h1>Hotel {{salas.nombreHotel}}</h1>
+        <h1>Hotel {{data.nombreHotel}}</h1>
     </div>
+
+    <div id="clock"></div>
 
     <table class="table">
         <tr>
             <th>Sala</th>
             <th>Cliente</th>
             <th>Reunión</th>
+            <th>Hora</th>
         </tr>
-        <tr ng-repeat="sala in hotel.salas">
-            <td>{{ sala.nombreSala  }}</td>
+        <tr ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}">
+            <td>{{ sala.nombre  }}</td>
             <td>{{ sala.cliente }}</td>
             <td>{{ sala.reunion }}</td>
+            <td>{{ sala.hora }}</td>
         </tr>
     </table>
 
@@ -48,6 +52,7 @@
 <script src="./bower_components/angular/angular.min.js"></script>
 <script src="./bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
 <script src="./app/app.js"></script>
+<script src="./app/clock.js"></script>
 
 </body>
 </html>
