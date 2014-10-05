@@ -23,6 +23,8 @@
         <h1>Hotel {{data.nombreHotel}}</h1>
     </div>
 
+    <div ng-show="data.error" class="alert alert-danger">{{ data.message }}</div>
+
     <div id="clock"></div>
 
     <table class="table">

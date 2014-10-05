@@ -64,14 +64,16 @@ tvidiApp.controller('GeneralController', [
     '$scope',
     '$window',
     '$http',
+    '$interval',
     'localStorageService',
-    function($scope, $window, $http, localStorageService){
+    function($scope, $window, $http, $interval, localStorageService){
 
         $scope.settings = localStorageService.get('settings');
 
         var apiUrl  = $scope.settings.apiUrl;
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
+        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 5000:  $scope.settings.timeRefresh * 1000;
 
         $scope.data = {
             error: false,
@@ -85,12 +87,14 @@ tvidiApp.controller('GeneralController', [
                 .success(function (data) {
                     $scope.data = data;
                 })
-                .error(function () {
+                .error(function (e) {
                     $scope.data = {error: true, message: e.message}
+                    console.log($scope.data);
                 });
         }
 
         $scope.getSalas();
+        $interval($scope.getSalas, timeRefresh);
     }
 ]);
 
@@ -98,8 +102,9 @@ tvidiApp.controller('SalaController', [
     '$scope',
     '$window',
     '$http',
+    '$interval',
     'localStorageService',
-    function($scope, $window, $http, $localStorageService){
+    function($scope, $window, $http, $interval, $localStorageService){
 
         $scope.settings = $localStorageService.get('settings');
 
@@ -107,6 +112,7 @@ tvidiApp.controller('SalaController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var idSala  = $scope.settings.idSala;
+        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 5000:  $scope.settings.timeRefresh * 1000;
 
         $scope.data = {
             error: false,
@@ -121,11 +127,12 @@ tvidiApp.controller('SalaController', [
                     $scope.sala = data;
                 })
                 .error(function(e){
-                    $scope.sala = {error: true,message: e.message}
+                    $scope.sala = {error: true, message: e.message}
 
                 });
         }
 
         $scope.getDatosSala();
+        $interval($scope.getDatosSala, timeRefresh);
     }
 ]);

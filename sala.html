@@ -23,6 +23,8 @@
         <h1>Sala {{sala.nombre}}</h1>
     </div>
 
+    <div ng-show="sala.error" class="alert alert-danger">{{ sala.message }}</div>
+
     <div id="clock"></div>
 
     <h2>{{ sala.cliente }}</h2>

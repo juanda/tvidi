@@ -44,6 +44,11 @@
             <input ng-model="settings.idSala" type="text" class="form-control" id="idSala" value="{{ settings.idSala }}">
         </div>
 
+        <div class="form-group">
+            <label for="timeRefreh">Tiempo de refresco de la información (en segundos, 5 por defecto)</label>
+            <input ng-model="settings.timeRefresh" type="number" class="form-control" id="idSala" value="{{ settings.timeRefresh }}">
+        </div>
+
         <input on-click="setErrorMessages()" type="submit" value="Guardar" class="btn btn-default">
     </form>
 
