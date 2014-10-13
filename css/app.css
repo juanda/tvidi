@@ -1,3 +1,31 @@
+
+body {
+
+    font-family: 'Helvetica Neue', Arial, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #000;
+    background: rgb(209,230,247);
+    background: -moz-linear-gradient(top, rgba(209,230,247,1) 0%, rgba(241,245,249,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(209,230,247,1)), color-stop(100%, rgba(241,245,249,1)));
+    background: -webkit-linear-gradient(top, rgba(209,230,247,1) 0%, rgba(241,245,249,1) 100%);
+    background: -ms-linear-gradient(top, rgba(209,230,247,1) 0%, rgba(241,245,249,1) 100%);
+    background: linear-gradient(to bottom, rgba(209,230,247,1) 0%, rgba(241,245,249,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1e6f7', endColorstr='#f1f5f9',GradientType=0);
+    background-size: auto 86px;
+    background-repeat: repeat-x;
+    background-position: 0 41px;
+    background-color: #f1f5f9;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+h1 {font-size:40;margin-top:6x;font-weight:normal}
+
+
 .ng-invalid.ng-dirty {
     border-color: red;
 }
@@ -5,3 +33,4 @@
 .ng-valid.ng-dirty {
     border-color: green;
 }
+
