@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TVIDI Información</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="tvidiApp">
+
+<div class="container" ng-controller="GeneralController">
+    <div class="page-header">
+        <h1>Gran Hotel del Vehículo</h1>
+    </div>
+
+    <div ng-show="data.error" class="alert alert-danger"> <span class="glyphicon glyphicon-warning-sign"></span> Mensaje de alerta</div>
+
+    <div id="clock"></div>
+
+    <table class="table">
+        <tr id="head_table">
+            <th><span class="glyphicon glyphicon-map-marker"></span> Sala</th>
+            <th><span class="glyphicon glyphicon-briefcase"></span> Cliente</th>
+            <th><span class="glyphicon glyphicon-picture"></span></th>
+            <th><span class="glyphicon glyphicon-list-alt"></span> Reunión</th>
+            <th><span class="glyphicon glyphicon-time"></span> Hora</th>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Renault</td>
+            <td><img src="images/renault.png" alt="Renault"></td><!--LOGO tamaño 200x20  PNG Transparente"-->
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Mazda</td>
+            <td><img src="images/mazda.png" alt="Mazda"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Hundai</td>
+            <td><img src="images/hundai.png" alt="Hundai"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Fiat</td>
+            <td><img src="images/fiat.png" alt="Fiat"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Jaguar</td>
+            <td><img src="images/jaguar.png" alt="Jaguar"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Mercedes-Benz</td>
+            <td><img src="images/mercedes.png" alt="Mercedes-Benz"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Seat</td>
+            <td><img src="images/seat.png" alt="Seat"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Toyota</td>
+            <td><img src="images/toyota.png" alt="Toyota"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Ford</td>
+            <td><img src="images/ford.png" alt="Ford"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Porsche</td>
+            <td><img src="images/porsche.png" alt="Porsche"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Suzuki</td>
+            <td><img src="images/suzuki.png" alt="Suzuki"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>        
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Lexus</td>
+            <td><img src="images/lexus.png" alt="Lexus"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>        
+        <tr>
+        <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+            <td>Nombre de sala</td>
+            <td>Maserati</td>
+            <td><img src="images/maserati.png" alt="Maserati"></td>
+            <td>Nombre de reunión</td>
+            <td>9:30</td>
+        </tr>        
+    </table>
+
+    <div class="footer">
+        <div class="container">
+            <p class="text-muted">created by yuido.com</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/clock.js"></script>
+
+</body>
+</html>
