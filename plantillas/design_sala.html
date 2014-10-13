@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TVIDI Información</title>
+    
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="tvidiApp">
+
+<div class="container" ng-controller="SalaController">
+    <div class="page-header">
+        <h1>Sala Nombre de sala</h1>
+    </div>
+        <div ng-show="sala.error" class="alert alert-danger"> <span class="glyphicon glyphicon-warning-sign"></span> Mensaje de error</div>
+        <div class="page-header">
+        <div id="clock"></div>
+	</div>
+
+      <div id="destacado">
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/suzuki_destacado.jpg" alt="Suzuki">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Suzuki</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/fiat_destacado.jpg" alt="Fiat">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Fiat</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/ford_destacado.jpg" alt="Ford">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Ford</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/hundai_destacado.jpg" alt="Hyundai">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Hyundai</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>  
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/jaguar_destacado.jpg" alt="Jaguar">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Jaguar</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/lexus_destacado.jpg" alt="Lexus">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Lexus</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>    
+      
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/mazda_destacado.jpg" alt="Mazda">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Mazda</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/mercedes_destacado.jpg" alt="Mercedes-Benz">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Mercedes-Benz</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/porsche_destacado.jpg" alt="Porsche">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Porsche</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/peugeot_destacado.jpg" alt="Peugeot">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Peugeot</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>  
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/renault_destacado.jpg" alt="Renault">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Renault</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/seat_destacado.jpg" alt="Seat">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Seat</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/audi_destacado.jpg" alt="Audi">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Audi</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/toyota_destacado.jpg" alt="Toyota">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Toyota</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/volkswagen_destacado.jpg" alt="Volkswagen">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Volkswagen</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/maserati_destacado.jpg" alt="Maserati">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Maserati</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>  
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/honda_destacado.jpg" alt="Honda">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Honda</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              <img src="./images/saab_destacado.jpg" alt="Saab">
+              <p><span class="glyphicon glyphicon-briefcase"></span> Saab</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> Nombre reunión</p>
+              <p><span class="glyphicon glyphicon-time"></span> 09:30</p>
+            </div>
+          </div>          
+      </div>
+
+    <div class="footer">
+        <div class="container">
+            <p class="text-muted">created by yuido.com</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/clock.js"></script>
+
+    
+</body>
+</html>
