@@ -1,5 +1,3 @@
-Para visualizar el html de las plantillas con sus dependencias situar los archivos de /plantillas en el directorio raíz.
-
 Se definen diversos elementos que el usuario podría modificar:
 
 
