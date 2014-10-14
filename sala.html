@@ -34,22 +34,12 @@
       
           <div ng-repeat="evento in sala.eventos" class="col-xs-6 col-md-2"> <!--Se añade este elemento que será el destacado. Se le aplica la clase destacado-thumbnail-->
             <div class="destacado-thumbnail">
-              <img ng-src="{{ evento.url_imagen }}" alt="Suzuki" /><!--¿Ponemos el alt dinámico o lo suprimimos?-->
-              <p><span class="glyphicon glyphicon-briefcase"></span>{{ evento.cliente}}</p>
-              <p><span class="glyphicon glyphicon-list-alt"></span> {{ evento.descripcion}}</p>
-              <p><span class="glyphicon glyphicon-time"></span>{{ evento.hora }}</p>
-            </div>
-          </div>    
-            
-          <div ng-repeat="evento in sala.eventos" class="col-xs-6 col-md-2">
-            <div class="thumbnail">
-              <img ng-src="{{ evento.url_imagen }}" alt="Suzuki" />
+              <img ng-src="{{ evento.url_imagen }}" alt="{{ evento.cliente }}" /><!--¿Ponemos el alt dinámico o lo suprimimos?-->
               <p><span class="glyphicon glyphicon-briefcase"></span>{{ evento.cliente}}</p>
               <p><span class="glyphicon glyphicon-list-alt"></span> {{ evento.descripcion}}</p>
               <p><span class="glyphicon glyphicon-time"></span>{{ evento.hora }}</p>
             </div>
           </div>
-          
       </div>
 
     <div class="footer">
