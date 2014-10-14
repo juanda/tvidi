@@ -72,25 +72,71 @@ h1 {
   margin-right: 20px;
   }
  
-#destacado {
+#contenedor-sala {
   margin-top: -1em;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   float:right;
   padding: 0.1em;
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.5);
-  border-bottom-left-radius: 0.4em;
-  border-bottom-right-radius: 0.4em;
+  border-radius: 0.4em;
   border-bottom: 1px solid #fbfbfb;
   border-top: 1px solid #fbfbfb;
   font-size:0.9em !important;
   width: 100%;
   }
 
+.destacado-thumbnail  {
+  background: #ffa84c; /* Antiguos buscadores */
+  background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(100%,#ff7b0d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffa84c 0%,#ff7b0d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+  -webkit-box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  border: 1px solid #ddd;
+  border-radius: 0.3em;
+  display: block;
+  line-height: 1.42857;
+  margin-bottom: 20px;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+  color:#fff;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.69);
+  box-sizing: border-box;
+  }
+
+.destacado-thumbnail img{
+  display: block ;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  width:180px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 1.42857;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.thumbnail img{
+  width:180px !important;
+  height: 100px !important;
+  }
+
+.destacado-thumbnail p{
+  margin: 0 0 0 1em;
+  }
+
 .well {
   max-width: 400px !important;
   margin: 0 auto 10px !important;
-}
+  }
  
 .thumbnail p{
   margin: 0 0 0 1em;
@@ -99,7 +145,7 @@ h1 {
 .text-muted {
    color:#fff !important;
    margin: 0.5em;
-}
+  }
 
 /* --Tablas-- */
 
@@ -128,13 +174,19 @@ table td {
 table tr:nth-child(odd) td {
   background: rgb(255,255,255);
   background: rgba(255,250,255, 0.8);
-}
+  }
 
 table tr:nth-child(even) td {
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.1);
-}
+  }
 
+table img {
+  max-width: 100%;
+  max-height: 100%;
+  width:200px;
+  height: 20px;
+  }
 
 /* --Adaptación Responsive-- */
 
