@@ -31,13 +31,24 @@
     <div id="clock"></div>
 
     <table class="table"> <!--A la cabecera de la tabla se le aplica el estilo head_table a las filas de la tabla no con esto conseguimos un efecto 3d para las cabeceras y un color blanco transtapente aterno para las filas (como aparece en la plantilla). En esta tabla no hay cabecera.-->
-        <tr ng-repeat="sala in data.salas" id="head_table">
-            <th><span class="glyphicon glyphicon-map-marker"></span>{{ sala.nombre }}</th>
-            <th><span class="glyphicon glyphicon-briefcase"></span> {{ sala.cliente }}</th>
-            <th><span class="glyphicon glyphicon-picture"></span><img height="20px" ng-src="{{ sala.url_imagen }}"></th>
-            <th><span class="glyphicon glyphicon-list-alt"></span>{{ sala.descripcion }}</th>
-            <th><span class="glyphicon glyphicon-time"></span>{{ sala.hora }}</th>
+        <tr id="head_table">
+            <th><span class="glyphicon glyphicon-map-marker"></span> Sala</th>
+            <th><span class="glyphicon glyphicon-briefcase"></span> Cliente</th>
+            <th><span class="glyphicon glyphicon-picture"></span></th>
+            <th><span class="glyphicon glyphicon-list-alt"></span> Reunión</th>
+            <th><span class="glyphicon glyphicon-time"></span> Hora</th>
         </tr>
+
+        <tr>
+            <!--ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}"-->
+        <tr ng-repeat="sala in data.salas">
+            <td>{{ sala.nombre }}</td>
+            <td>{{ sala.cliente }}</td>
+            <td><img src="{{ sala.url_imagen }}" alt="{{ sala.cliente }}"></td><!--LOGO tamaño 200x20  PNG Transparente"-->
+            <td>{{ sala.descripcion }}</td>
+            <td>{{ sala.hora }}</td>
+        </tr>
+
     </table>
 
     <div class="footer">
