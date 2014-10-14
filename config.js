@@ -1,6 +1,6 @@
 var settings = {
-    apiUrl: "http://192.168.1.105:8080/app.php",
+    apiUrl: "http://localhost:8000",
     apiKey: 123456,
-    idSala: 12,
-    idHotel: 15
+    idSala: 27,
+    idHotel: 8
 }

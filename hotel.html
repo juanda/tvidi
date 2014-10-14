@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TVIDI Información</title>
-    
+
     <!--Styles-->
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    
+
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,32 +21,24 @@
 </head>
 <body ng-app="tvidiApp">
 
-<div class="container" ng-controller="GeneralController">
+<div class="container" ng-controller="HotelController">
     <div class="page-header">
-        <h1>Hotel :-) {{data.nombreHotel}}</h1>
+        <h1>{{ data.nombreHotel }}</h1>
     </div>
 
-    <div ng-show="data.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> {{ data.message }}</div><!--No carga los iconos de Bootstrap - Documentación de referencia: http://getbootstrap.com/components/-->
+    <div ng-show="data.error" class="alert alert-danger"> <span class="glyphicon glyphicon-warning-sign"></span>{{ data.message }}</div>
 
     <div id="clock"></div>
 
     <table class="table">
-        <tr id="head_table">
-            <th><span class="glyphicon glyphicon-map-marker"></span> Sala</th><!--No carga los iconos de Bootstrap-->
-            <th><span class="glyphicon glyphicon-briefcase"></span> Cliente</th><!--No carga los iconos de Bootstrap-->
-            <th><span class="glyphicon glyphicon-picture"></span></th><!--No carga los iconos de Bootstrap-->
-            <th><span class="glyphicon glyphicon-list-alt"></span> Reunión</th><!--No carga los iconos de Bootstrap-->
-            <th><span class="glyphicon glyphicon-time"></span> Hora</th><!--No carga los iconos de Bootstrap-->
-        </tr>
-        <tr ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}">
-            <td>{{ sala.nombre  }}</td>
-            <td>{{ sala.cliente }}</td>
-            <td>{{ sala.logo }></td> <!--NO DEFINIDO - LOGO tamaño 200x20  PNG Transparente-->
-            <td>{{ sala.reunion }}</td>
-            <td>{{ sala.hora }}</td>
+        <tr ng-repeat="sala in data.salas" id="head_table">
+            <th><span class="glyphicon glyphicon-map-marker"></span>{{ sala.nombre }}</th>
+            <th><span class="glyphicon glyphicon-briefcase"></span> {{ sala.cliente }}</th>
+            <th><span class="glyphicon glyphicon-picture"></span></th>
+            <th><span class="glyphicon glyphicon-list-alt"></span>{{ sala.descripcion }}</th>
+            <th><span class="glyphicon glyphicon-time"></span>{{ sala.hora }}</th>
         </tr>
     </table>
-
 
     <div class="footer">
         <div class="container">
@@ -58,8 +50,8 @@
 
 <script src="./config.js"></script>
 <script src="./js/angular.min.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/clock.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/clock.js"></script>
 
 </body>
 </html>

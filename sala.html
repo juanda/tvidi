@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TVIDI Información</title>
-      
+    
     <!--Styles-->
     <link rel="stylesheet" type="text/css" href="css/app.css">
 
@@ -23,23 +23,23 @@
 
 <div class="container" ng-controller="SalaController">
     <div class="page-header">
-        <h1>Sala {{sala.nombre}}</h1>
+        <h1>Sala {{ sala.nombre }}</h1>
     </div>
-
-    <div ng-show="sala.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>  {{ sala.message }}</div> <!--No carga los iconos de Bootstrap - Documentación de referencia: http://getbootstrap.com/components/-->
-    <div class="page-header">
+        <div ng-show="sala.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>{{ sala.message }}</div>
+        <div class="page-header">
         <div id="clock"></div>
-    </div>
-    <div id="destacado">
-          <div class="col-xs-6 col-md-2">
+	</div>
+
+      <div id="destacado">
+          <div ng-repeat="evento in sala.eventos" class="col-xs-6 col-md-2">
             <div class="thumbnail">
-              {{ sala.logodestacado }}<!--NO DEFINIDO - LOGO GRANDE tamaño 180x100-->
-              <p><span class="glyphicon glyphicon-briefcase"></span> {{ sala.cliente }}</p> <!--No carga los iconos de Bootstrap-->
-              <p><span class="glyphicon glyphicon-list-alt"></span> {{ sala.reunion }}</p> <!--No carga los iconos de Bootstrap-->
-              <p><span class="glyphicon glyphicon-time"></span> {{ sala.hora }}</p> <!--No carga los iconos de Bootstrap-->
+              <img ng-src="{{ evento.url_imagen }}" alt="Suzuki" />
+              <p><span class="glyphicon glyphicon-briefcase"></span>{{ evento.cliente}}</p>
+              <p><span class="glyphicon glyphicon-list-alt"></span> {{ evento.descripcion}}</p>
+              <p><span class="glyphicon glyphicon-time"></span>{{ evento.hora }}</p>
             </div>
-          </div>    
-    </div>
+          </div>
+      </div>
 
     <div class="footer">
         <div class="container">
@@ -51,8 +51,9 @@
 
 <script src="./config.js"></script>
 <script src="./js/angular.min.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/clock.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/clock.js"></script>
 
+    
 </body>
 </html>
