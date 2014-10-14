@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TVIDI Información</title>
+      
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
 
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -23,14 +26,20 @@
         <h1>Sala {{sala.nombre}}</h1>
     </div>
 
-    <div ng-show="sala.error" class="alert alert-danger">{{ sala.message }}</div>
-
-    <div id="clock"></div>
-
-    <h2>{{ sala.cliente }}</h2>
-    <h2>{{ sala.hora }}</h2>
-    <h2>{{ sala.reunion }}</h2>
-
+    <div ng-show="sala.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>  {{ sala.message }}</div> <!--No carga los iconos de Bootstrap - Documentación de referencia: http://getbootstrap.com/components/-->
+    <div class="page-header">
+        <div id="clock"></div>
+    </div>
+    <div id="destacado">
+          <div class="col-xs-6 col-md-2">
+            <div class="thumbnail">
+              {{ sala.logodestacado }}<!--NO DEFINIDO - LOGO GRANDE tamaño 180x100-->
+              <p><span class="glyphicon glyphicon-briefcase"></span> {{ sala.cliente }}</p> <!--No carga los iconos de Bootstrap-->
+              <p><span class="glyphicon glyphicon-list-alt"></span> {{ sala.reunion }}</p> <!--No carga los iconos de Bootstrap-->
+              <p><span class="glyphicon glyphicon-time"></span> {{ sala.hora }}</p> <!--No carga los iconos de Bootstrap-->
+            </div>
+          </div>    
+    </div>
 
     <div class="footer">
         <div class="container">

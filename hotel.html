@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TVIDI Información</title>
-
+    
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,20 +26,22 @@
         <h1>Hotel :-) {{data.nombreHotel}}</h1>
     </div>
 
-    <div ng-show="data.error" class="alert alert-danger">{{ data.message }}</div>
+    <div ng-show="data.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> {{ data.message }}</div><!--No carga los iconos de Bootstrap - Documentación de referencia: http://getbootstrap.com/components/-->
 
     <div id="clock"></div>
 
     <table class="table">
-        <tr>
-            <th>Sala</th>
-            <th>Cliente</th>
-            <th>Reunión</th>
-            <th>Hora</th>
+        <tr id="head_table">
+            <th><span class="glyphicon glyphicon-map-marker"></span> Sala</th><!--No carga los iconos de Bootstrap-->
+            <th><span class="glyphicon glyphicon-briefcase"></span> Cliente</th><!--No carga los iconos de Bootstrap-->
+            <th><span class="glyphicon glyphicon-picture"></span></th><!--No carga los iconos de Bootstrap-->
+            <th><span class="glyphicon glyphicon-list-alt"></span> Reunión</th><!--No carga los iconos de Bootstrap-->
+            <th><span class="glyphicon glyphicon-time"></span> Hora</th><!--No carga los iconos de Bootstrap-->
         </tr>
         <tr ng-repeat="sala in data.salas" ng-class="{success: sala.enCurso}">
             <td>{{ sala.nombre  }}</td>
             <td>{{ sala.cliente }}</td>
+            <td>{{ sala.logo }></td> <!--NO DEFINIDO - LOGO tamaño 200x20  PNG Transparente-->
             <td>{{ sala.reunion }}</td>
             <td>{{ sala.hora }}</td>
         </tr>

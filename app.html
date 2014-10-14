@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TVIDI Menú</title>
-
+    
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    
     <!-- Bootstrap -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,13 +26,13 @@
         <h1>TVDI Menú</h1>
     </div>
 
-    <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+    <div class="well">
         <button ng-click="openSettings()" id="btn-settings" type="button" class="btn btn-primary btn-lg btn-block">Settings</button>
         <button ng-click="openGeneral()" ng-show="settings.idHotel && settings.apiKey" id="btn-general" type="button" class="btn btn-primary btn-lg btn-block">Mostrar información general</button>
         <button ng-click="openSala()" ng-show="settings.idSala && settings.apiKey" id="btn-sala" type="button" class="btn btn-primary btn-lg btn-block">Mostrar información de sala</button>
     </div>
 
-    <div class="well" style="max-width: 400px; margin: 0 auto 10px;" ng-hide="settings.apiKey && settings.idHotel">
+    <div class="well" ng-hide="settings.apiKey && settings.idHotel">
         <p ng-hide="settings.apiKey"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún una Api Key</p>
         <p ng-hide="settings.apiUrl"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún la Url de la Api</p>
         <p ng-hide="settings.idHotel"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún el ID del hotel</p>
