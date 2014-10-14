@@ -1,3 +1,5 @@
+Es preceptivo inyectar dependencias a los archivos de esta carpeta.
+
 Se definen diversos elementos que el usuario podría modificar:
 
 
