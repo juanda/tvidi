@@ -7,10 +7,16 @@
     <title>TVIDI Información</title>
     
     <!--Styles-->
-    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/computers.css">
 
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./config.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="./app/app.js"></script>
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +39,7 @@
       <div id="contenedor-sala">
       
           <div ng-repeat="evento in sala.eventos" class="col-xs-6 col-md-2"> <!--Se añade este elemento que será el destacado. Se le aplica la clase destacado-thumbnail-->
-            <div class="destacado-thumbnail">
+            <div class="thumbnail" ng-class="{ 'destacado-thumbnail' : evento.destacado==true }">
               <img ng-src="{{ evento.url_imagen }}" alt="{{ evento.cliente }}" /><!--¿Ponemos el alt dinámico o lo suprimimos?-->
               <p><span class="glyphicon glyphicon-briefcase"></span>{{ evento.cliente}}</p>
               <p><span class="glyphicon glyphicon-list-alt"></span> {{ evento.descripcion}}</p>
@@ -50,11 +56,6 @@
 
 </div>
 
-<script src="./config.js"></script>
-<script src="./js/angular.min.js"></script>
-<script src="./app/app.js"></script>
 <script src="./app/clock.js"></script>
-
-    
 </body>
 </html>

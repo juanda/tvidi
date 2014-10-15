@@ -18,8 +18,14 @@
 
 'use strict';
 
-var tvidiApp = angular.module('tvidiApp', []);
+var changeStyle = function () {
+    var link = document.getElementsByTagName('link').item(0);
+    link.href = 'css/' + settings.style + '.css'
+}
 
+changeStyle();
+
+var tvidiApp = angular.module('tvidiApp', []);
 
 tvidiApp.controller('HotelController', [
     '$scope',
