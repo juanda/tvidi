@@ -1,8 +1,8 @@
 var settings = {
-    apiUrl: "http://localhost:8000",
+    apiUrl: "http://192.168.1.105:8000",
     apiKey: 123456,
-    idSala: 27,
-    idHotel: 8,
+    idSala: 6,
+    idHotel: 3,
     // style puede ser: cielo, computers, gente, lomas, reunion, turquesa
-    style: 'cielo'
+    style: 'computers'
 };
