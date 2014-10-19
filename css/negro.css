@@ -26,12 +26,11 @@
 /* --Estilos generales y fondo-- */
 
 body {
-  background: #9C982A url(bg3.jpg) no-repeat;  /*--IMAGEN DE FONDO - DINÁMICO-- */
-  background-color: #eeeeee !important; /* --COLOR FONDO - DINÁMICO-- */
+  background-color: #000  !important; /* --COLOR FONDO - DINÁMICO-- */
   background-size: cover;
   color:#000 !important; /* --COLOR DEL TEXTO - DINÁMICO-- */
   font-family: Arial, Helvetica, sans-serif !important; /* --FUENTE DE CONTENIDO - DINÁMICO-- */
-  font-size:1.5em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
+  font-size:1.2em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
   font-weight:normal;  /* --GROSOR DEL TEXTO (Valores: normal / bold) -DINÁMICO-- */
   }
   
@@ -47,15 +46,15 @@ body {
 /* --Títulos-- */
 
 h1 {
-  font-family: 'Share', cursive !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
+  font-family: Arial, Helvetica, sans-serif !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
   text-align: right;
   padding: 0.1em 0.5em 0.1em 0.1em;
   margin: -0.9em 0 0 0 !important;
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.5);
   background:url(logo.png) no-repeat;
-  color: #069 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
-  letter-spacing: -0.05em;
+  color: #000 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
+  letter-spacing: -0.02em;
   }
 
 /* --Elementos-- */
@@ -72,25 +71,78 @@ h1 {
   margin-right: 20px;
   }
  
-#destacado {
+#contenedor-sala {
   margin-top: -1em;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   float:right;
   padding: 0.1em;
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.5);
-  border-bottom-left-radius: 0.4em;
-  border-bottom-right-radius: 0.4em;
+  border-radius: 0.4em;
   border-bottom: 1px solid #fbfbfb;
   border-top: 1px solid #fbfbfb;
   font-size:0.9em !important;
   width: 100%;
   }
 
+.destacado-thumbnail  {
+  background: #ffa84c; /* Antiguos buscadores */
+  background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(100%,#ff7b0d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffa84c 0%,#ff7b0d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+  -webkit-box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  border: 1px solid #ddd;
+  border-radius: 0.3em;
+  display: block;
+  line-height: 1.42857;
+  margin-bottom: 20px;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+  color:#fff;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.69);
+  box-sizing: border-box;
+  }
+
+.destacado-thumbnail img{
+  display: block ;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  width:180px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 1.42857;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.thumbnail img{
+  width:180px !important;
+  height: 100px !important;
+  }
+
+
+.icosala img{
+  width: 19px !important;
+  height: 17px !important;
+  float:left;
+  }
+
+.destacado-thumbnail p{
+  margin: 0 0 0 1em;
+  }
+
 .well {
   max-width: 400px !important;
   margin: 0 auto 10px !important;
-}
+  }
  
 .thumbnail p{
   margin: 0 0 0 1em;
@@ -99,21 +151,16 @@ h1 {
 .text-muted {
    color:#fff !important;
    margin: 0.5em;
-}
+  }
 
 /* --Tablas-- */
 
 #head_table {
-  background: rgb(255,255,255);
-  background: rgba(255,255,255, 1);
+  background: #333;
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.4);    
-  background-image: -moz-linear-gradient(#fff,#ccc);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));   
-  background-image: -webkit-linear-gradient(#fff, #ccc);
-  background-image: -o-linear-gradient(#fff, #ccc);
-  background-image: -ms-linear-gradient(#fff, #ccc);
-  background-image: linear-gradient(#fff, #ccc);  
-  text-transform: uppercase; 
+  text-transform: uppercase;
+  color:#fff;
+  font-size:1.2em !important;
   }
 
 table td {
@@ -126,15 +173,23 @@ table td {
   }
 
 table tr:nth-child(odd) td {
+  color: #fff; 
   background: rgb(255,255,255);
-  background: rgba(255,250,255, 0.8);
-}
+  background: rgba(255,250,255, 0.2);
+  }
 
 table tr:nth-child(even) td {
+  color: #fff; 
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.1);
-}
+  }
 
+table img {
+  max-width: 100%;
+  max-height: 100%;
+  width:200px;
+  height: 20px;
+  }
 
 /* --Adaptación Responsive-- */
 

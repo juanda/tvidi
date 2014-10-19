@@ -4,6 +4,8 @@ var settings = {
     apiKey: 123456,
     idSala: 1,
     idHotel: 1,
-    // style puede ser: lomas, cielo, gente, turquesa, reunion, computers
-    style: 'lomas'
+
+    // style puede ser: blanco, negro, cielo, computers, gente, lomas, reunion, turquesa // 
+    style: 'computers'
+
 };

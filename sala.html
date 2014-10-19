@@ -41,13 +41,12 @@
           <div ng-repeat="evento in sala.eventos" class="col-xs-6 col-md-2"> <!--Se añade este elemento que será el destacado. Se le aplica la clase destacado-thumbnail-->
             <div class="thumbnail" ng-class="{ 'destacado-thumbnail' : evento.destacado==true }">
               <img ng-src="{{ evento.url_imagen }}" alt="{{ evento.cliente }}" /><!--¿Ponemos el alt dinámico o lo suprimimos?-->
-              <p><img src="images/cliente_ico.png" alt="cliente">{{ evento.cliente}}</p>
-              <p><img src="images/reunion_ico.png" alt="reunión">{{ evento.descripcion}}</p>
-              <p><img src="images/hora_ico.png" alt="hora">{{ evento.hora }}</p>
+              <div class="icosala"><img src="images/cliente_ico.png" alt="cliente"> <p>{{ evento.cliente}}</p></div>
+              <div class="icosala"><img src="images/reunion_ico.png" alt="reunión"> <p>{{ evento.descripcion}}</p></div>
+              <div class="icosala"><img src="images/hora_ico.png" alt="hora"> <p>{{ evento.hora }}</p></div>
             </div>
           </div>
       </div>
-
     <div class="footer">
         <div class="container">
             <p class="text-muted">created by yuido.com</p>
