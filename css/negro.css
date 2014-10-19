@@ -26,12 +26,11 @@
 /* --Estilos generales y fondo-- */
 
 body {
-  background: #9C982A url(bg3.jpg) no-repeat;  /*--IMAGEN DE FONDO - DINÁMICO-- */
-  background-color: #eeeeee !important; /* --COLOR FONDO - DINÁMICO-- */
+  background-color: #000  !important; /* --COLOR FONDO - DINÁMICO-- */
   background-size: cover;
   color:#000 !important; /* --COLOR DEL TEXTO - DINÁMICO-- */
   font-family: Arial, Helvetica, sans-serif !important; /* --FUENTE DE CONTENIDO - DINÁMICO-- */
-  font-size:1.5em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
+  font-size:1.2em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
   font-weight:normal;  /* --GROSOR DEL TEXTO (Valores: normal / bold) -DINÁMICO-- */
   }
   
@@ -47,15 +46,15 @@ body {
 /* --Títulos-- */
 
 h1 {
-  font-family: 'Share', cursive !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
+  font-family: Arial, Helvetica, sans-serif !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
   text-align: right;
   padding: 0.1em 0.5em 0.1em 0.1em;
   margin: -0.9em 0 0 0 !important;
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.5);
   background:url(logo.png) no-repeat;
-  color: #069 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
-  letter-spacing: -0.05em;
+  color: #000 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
+  letter-spacing: -0.02em;
   }
 
 /* --Elementos-- */
@@ -157,16 +156,11 @@ h1 {
 /* --Tablas-- */
 
 #head_table {
-  background: rgb(255,255,255);
-  background: rgba(255,255,255, 1);
+  background: #333;
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.4);    
-  background-image: -moz-linear-gradient(#fff,#ccc);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));   
-  background-image: -webkit-linear-gradient(#fff, #ccc);
-  background-image: -o-linear-gradient(#fff, #ccc);
-  background-image: -ms-linear-gradient(#fff, #ccc);
-  background-image: linear-gradient(#fff, #ccc);  
-  text-transform: uppercase; 
+  text-transform: uppercase;
+  color:#fff;
+  font-size:1.2em !important;
   }
 
 table td {
@@ -179,11 +173,13 @@ table td {
   }
 
 table tr:nth-child(odd) td {
+  color: #fff; 
   background: rgb(255,255,255);
-  background: rgba(255,250,255, 0.8);
+  background: rgba(255,250,255, 0.2);
   }
 
 table tr:nth-child(even) td {
+  color: #fff; 
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.1);
   }

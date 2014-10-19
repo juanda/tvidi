@@ -129,6 +129,13 @@ h1 {
   height: 100px !important;
   }
 
+
+.icosala img{
+  width: 19px !important;
+  height: 17px !important;
+  float:left;
+  }
+
 .destacado-thumbnail p{
   margin: 0 0 0 1em;
   }

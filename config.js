@@ -3,6 +3,6 @@ var settings = {
     apiKey: 123456,
     idSala: 6,
     idHotel: 3,
-    // style puede ser: cielo, computers, gente, lomas, reunion, turquesa
+    // style puede ser: blanco, negro, cielo, computers, gente, lomas, reunion, turquesa // 
     style: 'computers'
 };
