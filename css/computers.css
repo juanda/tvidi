@@ -31,7 +31,7 @@ body {
   background-size: cover;
   color:#000 !important; /* --COLOR DEL TEXTO - DINÁMICO-- */
   font-family: 'Open Sans', sans-serif !important; /* --FUENTE DE CONTENIDO - DINÁMICO-- */
-  font-size:1.3em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
+  font-size:1.4em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
   font-weight:normal;  /* --GROSOR DEL TEXTO (Valores: normal / bold) -DINÁMICO-- */
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.60);
   }
