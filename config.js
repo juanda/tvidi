@@ -6,6 +6,6 @@ var settings = {
     idHotel: 1,
 
     // style puede ser: blanco, negro, cielo, computers, gente, lomas, reunion, turquesa // 
-    style: 'computers'
+    style: 'blanco'
 
 };
