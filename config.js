@@ -5,7 +5,6 @@ var settings = {
     idSala: 1,
     idHotel: 1,
 
-    // style puede ser: blanco, negro, cielo, computers, gente, lomas, reunion, turquesa // 
-    style: 'blanco'
-
+    // style puede ser: blanco, negrita, fractalia, cielo, computers, gente, lomas, reunion, turquesa, negro, aeropuerto y naranjas // 
+    style: 'naranjas'
 };

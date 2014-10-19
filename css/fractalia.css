@@ -26,10 +26,11 @@
 /* --Estilos generales y fondo-- */
 
 body {
-  background-color: #000  !important; /* --COLOR FONDO - DINÁMICO-- */
+  background: #9C982A url(bg12.jpg) no-repeat;  /*--IMAGEN DE FONDO - DINÁMICO-- */
+  background-color: #eeeeee !important; /* --COLOR FONDO - DINÁMICO-- */
   background-size: cover;
   color:#000 !important; /* --COLOR DEL TEXTO - DINÁMICO-- */
-  font-family: Arial, Helvetica, sans-serif !important; /* --FUENTE DE CONTENIDO - DINÁMICO-- */
+  font-family: 'Open Sans', sans-serif !important; /* --FUENTE DE CONTENIDO - DINÁMICO-- */
   font-size:1.4em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
   font-weight:normal;  /* --GROSOR DEL TEXTO (Valores: normal / bold) -DINÁMICO-- */
   }
@@ -46,15 +47,15 @@ body {
 /* --Títulos-- */
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
+  font-family: 'Share', cursive !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
   text-align: right;
   padding: 0.1em 0.5em 0.1em 0.1em;
   margin: -0.9em 0 0 0 !important;
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.5);
   background:url(logo.png) no-repeat;
-  color: #000 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
-  letter-spacing: -0.02em;
+  color: #069 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
+  letter-spacing: -0.05em;
   }
 
 /* --Elementos-- */
@@ -156,11 +157,15 @@ h1 {
 /* --Tablas-- */
 
 #head_table {
-  background: #333;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 1);
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.4);    
-  text-transform: uppercase;
-  color:#fff;
-  font-size:1.2em !important;
+  background-image: -moz-linear-gradient(#fff,#ccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));   
+  background-image: -webkit-linear-gradient(#fff, #ccc);
+  background-image: -o-linear-gradient(#fff, #ccc);
+  background-image: -ms-linear-gradient(#fff, #ccc);
+  background-image: linear-gradient(#fff, #ccc);   
   }
 
 table td {
@@ -169,17 +174,14 @@ table td {
   background: rgba(255,255,255, 0.8);
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
   vertical-align:middle !important;
-  text-transform: uppercase;
   }
 
 table tr:nth-child(odd) td {
-  color: #fff; 
   background: rgb(255,255,255);
-  background: rgba(255,250,255, 0.2);
+  background: rgba(255,250,255, 0.8);
   }
 
 table tr:nth-child(even) td {
-  color: #fff; 
   background: rgb(255,255,255);
   background: rgba(255,255,255, 0.1);
   }
