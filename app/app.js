@@ -30,13 +30,15 @@ var tvidiApp = angular.module('tvidiApp', []);
 tvidiApp.controller('HotelController', [
     '$scope',
     '$http',
-    function($scope, $http){
+    '$interval',
+    function($scope, $http, $interval){
 
         $scope.settings = settings;
 
         var apiUrl  = $scope.settings.apiUrl;
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
+        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 5000: $scope.settings.timeRefresh * 1000;
 
         $scope.data = {
             error: false,
@@ -46,6 +48,7 @@ tvidiApp.controller('HotelController', [
         $scope.getSalas = function(){
 
             var url     = apiUrl + '/hotel'  + '/' + idHotel + '/' +apiKey;
+
             $http.get(url)
                 .success(function (data) {
                     $scope.data = data;
@@ -57,13 +60,15 @@ tvidiApp.controller('HotelController', [
         }
 
         $scope.getSalas();
+        $interval($scope.getSalas, timeRefresh);
     }
 ]);
 
 tvidiApp.controller('SalaController', [
     '$scope',
     '$http',
-    function($scope, $http){
+    '$interval',
+    function($scope, $http, $interval){
 
         $scope.settings = settings;
 
@@ -71,6 +76,7 @@ tvidiApp.controller('SalaController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var idSala  = $scope.settings.idSala;
+        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 5000: $scope.settings.timeRefresh * 1000;
 
         $scope.data = {
             error: false,
@@ -91,5 +97,6 @@ tvidiApp.controller('SalaController', [
         }
 
         $scope.getDatosSala();
+        $interval($scope.getDatosSala, timeRefresh);
     }
 ]);
