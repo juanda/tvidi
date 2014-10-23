@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <!--Styles-->
     <link rel="stylesheet" type="text/css" href="css/fractalia.css">
+
 
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -23,36 +25,37 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body ng-app="tvidiApp">
 
-<div class="container" ng-controller="HotelController">
+<div class="container" ng-controller="SalaController">
     <div class="page-header">
-        <h1>{{ data.nombreHotel }}</h1>
+        <h1>Sala {{ sala.nombre }}</h1>
     </div>
+        <div ng-show="sala.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>{{ sala.message }}</div>
+        <div class="page-header">
+        <div id="clock"></div>
+	</div>
 
-    <div ng-show="data.error" class="alert alert-danger"> <span class="glyphicon glyphicon-warning-sign"></span>{{ data.message }}</div>
+      <div id="contenedor-sala">
+      
+          <div ng-repeat="evento in sala.eventos" class="col-xs-12">
+          
+            <div class="sala-hora"><p>{{ evento.hora }}</p></div>
+            <div class="sala-cliente"><p>{{ evento.cliente}}</p></div>
 
-    <div id="clock"></div>
+            <div class="thumbnail">
+              <img ng-src="{{ evento.url_imagen }}" alt="{{ evento.cliente }}" class="logo-sala" />
+              <!-- Sería pertinente revisar si los elementos dinámicos insertados son correctos-->
+              <!--El tamaño máximo del logo para pantallas es de 500x190, las plantillas están optimizadas para archivos png transparentes-->
+            </div>
+            <div class="sala-descrip"><p>{{ evento.descripcion}}</p></div>
+          </div>
+          
+      </div>
 
-    <table class="table">
-        <tr id="head_table">
-            <th>Sala</th>
-            <th>Cliente</th>
-            <th>Reunión</th>
-            <th>Hora</th>
-        </tr>
 
-        <tr>
-
-        <tr ng-repeat="sala in data.salas">
-            <td>{{ sala.nombre }}</td>
-            <td>{{ sala.cliente }}</td>
-            <td>{{ sala.descripcion }}</td>
-            <td>{{ sala.hora }}</td>
-        </tr>
-
-    </table>
-
+      </div>
     <div class="footer">
         <div class="container">
             <p class="text-muted">created by yuido.com</p>
@@ -61,7 +64,7 @@
 
 </div>
 
-
 <script src="./app/clock.js"></script>
 </body>
+
 </html>

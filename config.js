@@ -10,5 +10,5 @@ var settings = {
     timeRefresh: 1, // en minutos
 
     // style puede ser: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa // 
-    style: 'reunion'
+	style: 'fractalia'
 };
