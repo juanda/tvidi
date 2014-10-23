@@ -29,39 +29,44 @@
 <body ng-app="tvidiApp">
 
 <div class="container" ng-controller="SalaController">
-    <div class="page-header">
-        <h1>Sala {{ sala.nombre }}</h1>
-    </div>
-        <div ng-show="sala.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>{{ sala.message }}</div>
-        <div class="page-header">
-        <div id="clock"></div>
-	</div>
+    
+   <div class="page-header">
+      <h1>Sala {{ sala.nombre }}</h1>
+   </div>
+    
+   <div ng-show="sala.error" class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span>{{ sala.message }}</div>
+     
+   <div class="page-header">
+      <div id="clock"></div>
+   </div>
 
-      <div id="contenedor-sala">
+   <div id="contenedor-sala">
       
-          <div ng-repeat="evento in sala.eventos" class="col-xs-12">
+      <div ng-repeat="evento in sala.eventos" class="col-xs-12">
           
             <div class="sala-hora"><p>{{ evento.hora }}</p></div>
+            
             <div class="sala-cliente"><p>{{ evento.cliente}}</p></div>
 
             <div class="thumbnail">
-              <img ng-src="{{ evento.url_imagen }}" alt="{{ evento.cliente }}" class="logo-sala" />
-              <!-- Sería pertinente revisar si los elementos dinámicos insertados son correctos-->
-              <!--El tamaño máximo del logo para pantallas es de 500x190, las plantillas están optimizadas para archivos png transparentes-->
+               <img ng-src="{{ evento.url_imagen }}" alt="{{ evento.cliente }}" class="logo-sala" />
+               <!-- Sería pertinente revisar si los elementos dinámicos insertados son correctos-->
+               <!--El tamaño máximo del logo para pantallas es de 500x190, las plantillas están optimizadas para archivos png transparentes-->
             </div>
+            
             <div class="sala-descrip"><p>{{ evento.descripcion}}</p></div>
-          </div>
-          
+            
       </div>
 
+   </div>
+ 
+</div>
 
-    </div>
-    <div class="footer">
-        <div class="container">
-            <p class="text-muted">created by yuido.com</p>
-        </div>
-    </div>
-
+   <div class="footer">
+      <div class="container">
+         <p class="text-muted">Fractalia</p>
+      </div>
+   </div>
 
 <script src="./app/clock.js"></script>
 </body>
