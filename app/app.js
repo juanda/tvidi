@@ -38,7 +38,7 @@ tvidiApp.controller('HotelController', [
         var apiUrl  = $scope.settings.apiUrl;
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
-        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 5000: $scope.settings.timeRefresh * 1000;
+        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
 
         $scope.data = {
             error: false,
@@ -76,7 +76,7 @@ tvidiApp.controller('SalaController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var idSala  = $scope.settings.idSala;
-        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 5000: $scope.settings.timeRefresh * 1000;
+        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
 
         $scope.data = {
             error: false,
