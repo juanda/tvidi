@@ -8,7 +8,8 @@ var settings = {
     idSala: 1,
     idHotel: 1,
     timeRefresh: 1, // en minutos
+    antelacion: 800, // en minutos, tiempo para mostrar con antelación los siguientes eventos
 
     // style puede ser: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa // 
-	style: 'fractalia'
+    style: 'gente'
 };

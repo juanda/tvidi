@@ -30,6 +30,7 @@ tvidiApp.controller('GeneralController', [
         var apiUrl  = $scope.settings.apiUrl;
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
+        var antelacion = $scope.settings.antelacion;
 
         $scope.data = {
             error: false,
@@ -38,7 +39,9 @@ tvidiApp.controller('GeneralController', [
 
         $scope.getSalas = function(){
 
-            var url     = apiUrl + '/hotel/' + idHotel  + '/' + apiKey;
+//            var url     = apiUrl + '/hotel/' + idHotel  + '/' + apiKey;
+            var url     = apiUrl + '/hotel/' + idHotel  + '/' + apiKey + '/' + antelacion;
+            
             $http.get(url)
                 .success(function (data) {
                     $scope.data = data;
@@ -64,6 +67,7 @@ tvidiApp.controller('SalaController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var idSala  = $scope.settings.idSala;
+        var antelacion = $scope.settings.antelacion;
 
         $scope.data = {
             error: false,
