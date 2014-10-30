@@ -1,15 +1,17 @@
 var settings = {
     //apiUrl: "http://192.168.1.105:8000",
 
-    apiUrl: "http://localhost:8080/TvidiServer/web/app_dev.php",
 
+    apiUrl: "http://localhost:8080/TvidiServer/web/app_dev.php",
 //    apiUrl: "http://178.33.1.85",
+
     apiKey: 123456,
-    idSala: 1,
-    idHotel: 1,
+    idSala: 4,
+    idHotel: 2,
     timeRefresh: 1, // en minutos
-    antelacion: 800, // en minutos, tiempo para mostrar con antelación los siguientes eventos
+    antelacion: 10000,  // en minutos
 
     // style puede ser: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa // 
-    style: 'gente'
+    style: 'turquesa'
+
 };

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TVIDI Información</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/turquesa.css"> <!--Se podría modificar el tema cambiando las css por las pertenecientes a los temas: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa-->
+
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./config.js"></script>
+    <script src="./js/angular.min.js"></script>
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="tvidiApp">
+
+<div class="container">
+    
+   <div class="page-header">
+      <h1>Sala Gobelas</h1>
+   </div>
+     
+   <div id="contenedor-ptsala">
+
+      <div class="col-md-6">
+      
+        <div class="estadosala"> 
+          <div class="contenedor-circ">
+            <div class="circulo-sievento"></div> <!--hay que cambiar la clase para modificar el color del círculo, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
+            <div class="circulo-sievento anima"></div><!--hay que cambiar la clase para modificar el color de la animación, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
+            <div class="ptsala-hora-actual"><p class="hora-ptsala">13:35</p><p class="fecha-ptsala">Martes 5 Abril</p></div>
+          </div>
+        </div>
+        <img src="images/logo-cliente-ford.png" alt="Ford" class="logo-ptsala" /><!--Logo de tamaño 500x190 del evento optimizado para png transparente con el escalado forzado por las css -->
+        
+      </div>
+      
+      <div class="col-md-6">
+      
+        <div class="sala-hora"><p>13:00 – 17:00 h</p></div>
+          <div class="thumbnail">
+            <h2 class="ptsala">Ford</h2>
+            <div><p class="descipevento">Presentación de resultados de las pruebas realizadas en campo sobre las tareas oportunas</p></div>
+            <div class="titupevent"><p>Próximos eventos:</p></div>
+            <div class="listeventos">
+              <ul>
+                <li>18:00 – 19:00h  Banco Santander</li>
+                <li>19:15 – 23:00h  Sala nocturna</li>
+              </ul>
+            </div>            
+          </div>
+            
+      </div>
+      
+   </div>
+   
+</div>
+
+<div class="footer">
+  <div class="container">
+    <p class="text-muted">Fractalia</p>
+  </div>
+</div>
+
+<script src="./app/clock.js"></script>
+</body>
+
+</html>
