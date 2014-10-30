@@ -81,11 +81,9 @@ tvidiApp.controller('SalaController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var idSala  = $scope.settings.idSala;
-<<<<<<< HEAD
         var antelacion = $scope.settings.antelacion;
-=======
         var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
->>>>>>> a7d015bbbd35c38cac916ab486b5a4c5dbbaa2ec
+
 
         $scope.data = {
             error: false,
