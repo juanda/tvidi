@@ -1,12 +1,12 @@
 var settings = {
     //apiUrl: "http://192.168.1.105:8000",
 
-    apiUrl: "http://localhost:8000",
+    //apiUrl: "http://localhost:8000",
 
-    //apiUrl: "http://178.33.1.85",
+    apiUrl: "http://178.33.1.85",
     apiKey: 123456,
-    idSala: 4,
-    idHotel: 2,
+    idSala: 2,
+    idHotel: 1,
     timeRefresh: 1, // en minutos
     antelacion: 10000,  // en minutos
 

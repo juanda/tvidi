@@ -351,6 +351,21 @@ h2{
   line-height: 1.3em;
   margin: 0 0 2em 2em !important;
   }
+.thumb-ptsala {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: block;
+  line-height: 1.42857;
+  margin-bottom: 20px;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;	
+  min-width: 46em;
+  }
+
+.thumb-ptsala p{
+  margin: 0 0 0 1em;
+  }
 
 .listeventos {  }
 
