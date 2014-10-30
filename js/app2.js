@@ -39,10 +39,7 @@ tvidiApp.controller('HotelController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var antelacion = $scope.settings.antelacion;
-<<<<<<< HEAD
-=======
         var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
->>>>>>> a7d015bbbd35c38cac916ab486b5a4c5dbbaa2ec
 
         $scope.data = {
             error: false,
@@ -51,14 +48,10 @@ tvidiApp.controller('HotelController', [
 
         $scope.getSalas = function(){
 
-<<<<<<< HEAD
-//            var url     = apiUrl + '/hotel/' + idHotel  + '/' + apiKey;
+
             var url     = apiUrl + '/hotel/' + idHotel  + '/' + apiKey + '/' + antelacion;
             
-=======
-            var url     = apiUrl + '/hotel'  + '/' + idHotel + '/' + antelacion + '/' + apiKey;
 
->>>>>>> a7d015bbbd35c38cac916ab486b5a4c5dbbaa2ec
             $http.get(url)
                 .success(function (data) {
                     $scope.data = data;
