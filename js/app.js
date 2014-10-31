@@ -174,8 +174,7 @@ tvidiApp.controller('Salav2Controller', [
 
            
             $http.get(url)
-                .success(function(data){
-             
+                .success(function(data){            
                     $scope.sala = data;
                     if(data.enCurso) {
                         $scope.evento0 = data.eventos[0];

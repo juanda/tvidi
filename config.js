@@ -9,7 +9,7 @@ var settings = {
     idSala: 2,
     idHotel: 1,
     timeRefresh: 1, // en minutos
-    antelacion: 800,  // en minutos
+    antelacion: 10,  // en minutos
 
     // style puede ser: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa // 
     style: 'fractalia'
