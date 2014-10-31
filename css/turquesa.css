@@ -513,6 +513,7 @@ h2{
   border-bottom: 1px solid #fbfbfb;
   border-top: 1px solid #fbfbfb;
   font-size:0.9em !important;
+  width:100% !important;	
   }
 
 .descipevento {
@@ -529,8 +530,7 @@ h2{
   line-height: 1.42857;
   margin-bottom: 20px;
   padding: 4px;
-  transition: all 0.2s ease-in-out 0s;	
-  min-width: 46em;
+  transition: all 0.2s ease-in-out 0s;
   }
 
 .thumb-ptsala p{
@@ -577,10 +577,10 @@ h2{
   }
 
 .logo-ptsala {
-  display: block;
-  margin: 4em 0 0 10em;
+  margin-left: 13em;
+  margin-right: auto;
   max-width: 50%;
-  position: relative;¡
+  position: relative;
   }
 
 .contenedor-circ {
