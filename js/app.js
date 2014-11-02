@@ -49,7 +49,7 @@ tvidiApp.controller('HotelController', [
         $scope.getSalas = function(){
 
 
-            var url     = apiUrl + '/hotel/' + idHotel  + '/' + apiKey + '/' + antelacion;
+            var url     = apiUrl + '/hotel/' + idHotel  + '/' + antelacion + '/' + apiKey;
             
 
             $http.get(url)
