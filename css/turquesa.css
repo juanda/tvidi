@@ -399,7 +399,7 @@ h2{
   display: block;
   margin: 4em 0 0 10em;
   max-width: 50%;
-  position: relative;
+  position: relative;¡
   }
 
 .contenedor-circ {
@@ -456,11 +456,6 @@ h2{
   position: static;
   animation: animado 5s infinite;
   animation-delay: 1s;
-  z-index: 1;
-  }
-  
-.noanima {
-  position: relative !important;
   z-index: 1;
   }
   
@@ -568,7 +563,7 @@ h2{
  -moz-box-shadow:1px 1px 3px #999999;
   -webkit-transform:rotate(-2deg);
   -webkit-box-shadow: 1px 1px 3px #999999;
-  transform:rotate(-2deg);
+  transform:rotate(0deg);
   box-shadow: 1px 1px 3px #999999;
   }
   
