@@ -28,19 +28,20 @@
 
     <div class="well">
         <button ng-click="openSettings()" id="btn-settings" type="button" class="btn btn-primary btn-lg btn-block">Settings</button>
-        <button ng-click="openGeneral()" ng-show="settings.idHotel && settings.apiKey" id="btn-general" type="button" class="btn btn-primary btn-lg btn-block">Mostrar información general</button>
+        <button ng-click="openGeneral()" ng-show="settings.idHotel && settings.apiKey && settings.antelacion" id="btn-general" type="button" class="btn btn-primary btn-lg btn-block">Mostrar información general</button>
         <button ng-click="openSala()" ng-show="settings.idSala && settings.apiKey" id="btn-sala" type="button" class="btn btn-primary btn-lg btn-block">Mostrar información de sala</button>
     </div>
 
-    <div class="well" ng-hide="settings.apiKey && settings.idHotel">
+    <div class="well" ng-hide="settings.apiKey && settings.idHotel && settings.antelacion">
         <p ng-hide="settings.apiKey"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún una Api Key</p>
         <p ng-hide="settings.apiUrl"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún la Url de la Api</p>
         <p ng-hide="settings.idHotel"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún el ID del hotel</p>
+        <p ng-hide="settings.antelacion"><span class="glyphicon glyphicon-warning-sign"></span> No has definido aún la antelación</p>
     </div>
 
     <div class="footer">
         <div class="container">
-            <p class="text-muted">created by yuido.com</p>
+            <p class="text-muted"></p>
         </div>
     </div>
 

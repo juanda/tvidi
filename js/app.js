@@ -48,7 +48,9 @@ tvidiApp.controller('HotelController', [
 
         $scope.getSalas = function(){
 
-            var url     = apiUrl + '/hotel'  + '/' + idHotel + '/' + antelacion + '/' + apiKey;
+
+            var url     = apiUrl + '/hotel/' + idHotel  + '/' + antelacion + '/' + apiKey;
+            
 
             $http.get(url)
                 .success(function (data) {
@@ -79,7 +81,9 @@ tvidiApp.controller('SalaController', [
         var apiKey  = $scope.settings.apiKey;
         var idHotel = $scope.settings.idHotel;
         var idSala  = $scope.settings.idSala;
+        var antelacion = $scope.settings.antelacion;
         var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
+
 
         $scope.data = {
             error: false,
@@ -168,12 +172,14 @@ tvidiApp.controller('Salav2Controller', [
         $scope.getDatosSala = function () {
             var url     = apiUrl + '/salav2' + '/' + idSala + '/' + antelacion  + '/' + apiKey ;
 
+           
             $http.get(url)
-                .success(function(data){
+                .success(function(data){            
                     $scope.sala = data;
                     if(data.enCurso) {
                         $scope.evento0 = data.eventos[0];
                         $scope.eventosSiguientes = data.eventos.splice(1);
+                         
                     }else{
                         $scope.evento0 = {url_imagen: './images/logo-blank.png', cliente: 'Sala libre', descripcion: '', hora: ''};
                         $scope.eventosSiguientes = data.eventos;

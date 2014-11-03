@@ -42,7 +42,7 @@
             <div class="estadosala">
                 <div class="contenedor-circ">
                     <div ng-class="sala.enCurso? 'circulo-noevento' : 'circulo-sievento'"></div> <!--hay que cambiar la clase para modificar el color del círculo, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
-                    <div ng-class="sala.enCurso? 'circulo-noevento anima' : 'circulo-sievento anima'"></div><!--hay que cambiar la clase para modificar el color de la animación, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
+                    <div ng-class="sala.enCurso? 'circulo-noevento noanima' : 'circulo-sievento noanima'"></div><!--hay que cambiar la clase para modificar el color de la animación, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
                     <div class="ptsala-hora-actual"><p  class="hora-ptsala">{{ stringTime }}</p><p class="fecha-ptsala">{{ stringDate }}</p></div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="thumb-ptsala">
                 <h2 class="ptsala">{{ evento0.cliente }}</h2>
                 <div><p class="descipevento">{{ evento0.descripcion }}</p></div>
-                <div class="titupevent"><p>Próximos eventos:</p></div>
+                <!--<div class="titupevent"><p>Próximos eventos:</p></div>-->
                 <div class="listeventos">
                     <ul ng-repeat="evento in eventosSiguientes">
                         <li>{{ evento.hora }} - {{ evento.cliente }} - {{ evento.descripcion }}</li>

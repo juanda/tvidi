@@ -399,7 +399,7 @@ h2{
   display: block;
   margin: 4em 0 0 10em;
   max-width: 50%;
-  position: relative;¡
+  position: relative;
   }
 
 .contenedor-circ {
@@ -456,6 +456,11 @@ h2{
   position: static;
   animation: animado 5s infinite;
   animation-delay: 1s;
+  z-index: 1;
+  }
+  
+.noanima {
+  position: relative !important;
   z-index: 1;
   }
   
