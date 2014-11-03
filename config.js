@@ -7,7 +7,7 @@ var settings = {
     idSala: 1,
     idHotel: 1,
     timeRefresh: 1, // en minutos
-    antelacion: 10000,  // en minutos
+    antelacion: 1600,  // en minutos
 
     // style puede ser: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa // 
     style: 'blanco'
