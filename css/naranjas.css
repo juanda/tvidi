@@ -55,6 +55,7 @@ h1 {
   background:url(logo.png) no-repeat;
   color: #F60 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
   letter-spacing: 0.02em;
+  height:1.3em;
   }
 
 /* --Elementos-- */
