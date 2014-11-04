@@ -1,0 +1,666 @@
+@charset "utf-8";
+/* CSS salas */
+
+/* --Fuentes-- Por defecto: Arial, Helvetica, sans-serif en contenido y 'Share', cursive en título*/  
+  /* --Tipos sin serifa-- */
+    @import url(http://fonts.googleapis.com/css?family=Share:400,700italic);
+            /* -En CSS: font-family: 'Share', cursive !important; --- Líneas 50 para título y 33 para contenido- */
+    @import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
+            /* -En CSS: font-family: 'Archivo Narrow', sans-serif !important; --- Líneas 50 para título y 33 para contenido- */
+    @import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
+            /* -En CSS: font-family: 'Open Sans', sans-serif !important; --- Líneas 50 para título y 33 para contenido- */
+    @import url(http://fonts.googleapis.com/css?family=Titillium+Web:600);
+            /* -En CSS: font-family: 'Titillium Web', sans-serif !important; --- Líneas 50 para título y 33 para contenido- */
+    @import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
+            /* -En CSS: font-family: 'Raleway', sans-serif !important; --- Líneas 50 para título y 33 para contenido- */
+			
+  /* --Tipos con serifa y handwriting-- */
+    @import url(http://fonts.googleapis.com/css?family=Rokkitt);
+            /* -En CSS: font-family: 'Rokkitt', serif !important; --- Líneas 50 para título y 33 para contenido- */
+    @import url(http://fonts.googleapis.com/css?family=PT+Serif);
+            /* -En CSS: font-family: 'PT Serif', serif !important; --- Líneas 50 para título y 33 para contenido- */
+    @import url(http://fonts.googleapis.com/css?family=Lobster);
+            /* -En CSS: font-family: 'Lobster', cursive !important; --- Líneas 50 para título y 33 para contenido- */		
+		
+		
+/* --Estilos generales y fondo-- */
+
+body {
+  background: #9C982A url(bg6.jpg) no-repeat;  /*--IMAGEN DE FONDO - DINÁMICO-- */
+  background-color: #eeeeee !important; /* --COLOR FONDO - DINÁMICO-- */
+  background-size: cover;
+  color:#000 !important; /* --COLOR DEL TEXTO - DINÁMICO-- */
+  font-family: 'Open Sans', sans-serif !important; /* --FUENTE DE CONTENIDO - DINÁMICO-- */
+  font-size:1.4em !important; /* --TAMAÑO DE LETRA - DINÁMICO-- */
+  font-weight:normal;  /* --GROSOR DEL TEXTO (Valores: normal / bold) -DINÁMICO-- */
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.60);
+  }
+  
+.container {
+	width: 100% !important;
+	padding: 0px !important;
+  }
+  
+.page-header {
+	border-bottom: 0px !important;
+   }
+
+/* --Títulos-- */
+
+h1 {
+  font-family: 'Raleway', sans-serif !important; /* --FUENTE DE TÍTULO - DINÁMICO-- */
+  text-align: right;
+  padding: 0.1em 0.5em 0.1em 0.1em;
+  margin: -0.9em 0 0 0 !important;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.5);
+  background:url(logo.png) no-repeat;
+  color: #000 !important; /* --COLOR DEL TÍTULO - DINÁMICO-- */
+  letter-spacing: 0.05em;
+  height:1.3em;
+  }
+
+/* --Elementos-- */
+
+#clock {
+  margin-top: -1em;
+  float:right;
+  padding: 0.3em;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.5);
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+  border-bottom: 1px solid #fbfbfb;
+  margin-right: 20px;
+  }
+ 
+#contenedor-sala {
+  margin-top: -1em;
+  margin-right: 10px;
+  margin-left: 10px;
+  float:right;
+  padding: 0.1em;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.5);
+  border-radius: 0.4em;
+  border-bottom: 1px solid #fbfbfb;
+  border-top: 1px solid #fbfbfb;
+  font-size:0.9em !important;
+  width: 100%;
+  }
+
+.destacado-thumbnail  {
+  background: #ffa84c; /* Antiguos buscadores */
+  background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(100%,#ff7b0d)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffa84c 0%,#ff7b0d 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffa84c 0%,#ff7b0d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+  -webkit-box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  box-shadow: 4px 2px 5px 0px rgba(0, 0, 0, 0.56);
+  border: 1px solid #ddd;
+  border-radius: 0.3em;
+  display: block;
+  line-height: 1.42857;
+  margin-bottom: 20px;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+  color:#fff;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.69);
+  box-sizing: border-box;
+  }
+
+.thumbnail img{
+  width: 500px !important;
+  height: 190px !important;
+  } /* --------------------------------------------------------SE MODIFICA------------------------------------------------------------- */
+
+
+/*.icosala img{
+  width: 19px !important;
+  height: 17px !important;
+  float:left;
+  } --------------------------------------------------------SE ELIMINA------------------------------------------------------------- */
+
+.sala p{
+  color: #666;
+  font-size: 2em;
+  display: block;
+  text-align:center;
+  }/* --------------------------------------------------------SE AÑADE Y MODIFICA------------------------------------------------------------- */
+
+.sala-hora p{
+  color: #fff;
+  font-size: 2.5em;
+  display: block;
+  text-align:center;
+  float: right;
+  display:block;
+  background-color: #0291b5;
+    /* IE9, iOS 3.2+ */
+  background-color: #0275b5;
+    /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxMDAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMGM0ZjQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAzMjY3NiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 100% 0%, 0% 100%,color-stop(0, rgb(0, 196, 244)),color-stop(1, rgb(3, 38, 118)));
+    /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(top right,rgb(0, 196, 244) 0%,rgb(3, 38, 118) 100%);
+    /* IE10+ */
+  background-image: repeating-linear-gradient(to bottom left,rgb(0, 196, 244) 0%,rgb(3, 38, 118) 100%);
+  background-image: -ms-repeating-linear-gradient(top right,rgb(0, 196, 244) 0%,rgb(3, 38, 118) 100%);
+  margin:0.1em;
+  padding: 0 0.5em 0 2em;
+  border-radius: 0px 0px 0px 20px;
+  -webkit-border-radius: 0px 0px 0px 20px;
+  -moz-border-radius: 0px 0px 0px 20px; 
+  }/* --------------------------------------------------------SE AÑADE------------------------------------------------------------- */
+
+.sala-cliente p{
+  color: #fff;
+  font-size: 2.5em;
+  display: block;
+  text-align:center;
+  float:left;
+  background-position:right;
+  margin:0.1em;
+  padding: 0 2em 0 0.5em ;
+  background-color: #0275b5;
+    /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMGM0ZjQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAzMjY3NiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(0, 196, 244)),color-stop(1, rgb(3, 38, 118)));
+    /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(top left,rgb(0, 196, 244) 0%,rgb(3, 38, 118) 100%);
+    /* IE10+ */
+  background-image: repeating-linear-gradient(to bottom right,rgb(0, 196, 244) 0%,rgb(3, 38, 118) 100%);
+  background-image: -ms-repeating-linear-gradient(top left,rgb(0, 196, 244) 0%,rgb(3, 38, 118) 100%);
+  border-radius: 0px 0px 20px 0px;
+  -webkit-border-radius: 0px 0px 20px 0px;
+  -moz-border-radius: 0px 0px 20px 0px; 
+  }/* --------------------------------------------------------SE AÑADE------------------------------------------------------------- */
+
+.sala-descrip p{
+  color: #000;
+  font-size: 4em;
+  display: block;
+  text-align:center;
+  text-shadow: 0.7px 1.5px 1.5px rgba(0, 0, 0, 0.4);
+  margin: 1em;
+  }/* --------------------------------------------------------SE AÑADE------------------------------------------------------------- */
+
+.logo-sala {
+   display:block;
+   margin: 6em;
+   }/* --------------------------------------------------------SE MODIFICA------------------------------------------------------------- */
+
+.destacado-thumbnail p{
+  margin: 0 0 0 1em;
+  }
+
+.well {
+  max-width: 400px !important;
+  margin: 0 auto 10px !important;
+  }
+ 
+.thumbnail p{
+  margin: 0 0 0 1em;
+  }
+
+.text-muted {
+   color:#fff !important;
+   margin: 0.5em;
+  }
+
+
+/* --Tablas-- */
+
+#head_table {
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 1);
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.4);    
+  background-image: -moz-linear-gradient(#fff,#ccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));   
+  background-image: -webkit-linear-gradient(#fff, #ccc);
+  background-image: -o-linear-gradient(#fff, #ccc);
+  background-image: -ms-linear-gradient(#fff, #ccc);
+  background-image: linear-gradient(#fff, #ccc);  
+  text-transform: uppercase; 
+  }
+
+table td {
+  border-bottom: 1px solid #fbfbfb;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.8);
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+  vertical-align:middle !important;
+  text-transform: uppercase;
+  }
+
+table tr:nth-child(odd) td {
+  background: rgb(255,255,255);
+  background: rgba(255,250,255, 0.8);
+  }
+
+table tr:nth-child(even) td {
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.1);
+  }
+
+table img {
+  max-width: 100%;
+  max-height: 100%;
+  width:200px;
+  height: 20px;
+  }
+
+/* --Adaptación Responsive-- */
+
+
+@media 
+only screen and (max-width: 550px),
+(min-device-width: 400px) and (max-device-width: 550px)
+
+{
+
+h1 {
+  font-size:1.5em !important;
+  background: rgb(255,255,255) !important;
+  background: rgba(255,255,255, 0.5) !important;
+  background: none;
+  text-align: left;
+  }
+
+#clock {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  }
+
+table, th, td, tr { 
+  display: block;
+  }
+		
+#head_table{ 
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  }
+
+}
+	
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+
+{
+  body { 
+  padding: 0; 
+  margin: 0; 
+  width: 320px;
+  }
+
+}
+
+/* --Estilos color (heredados)-- */
+
+.ng-invalid.ng-dirty {
+  border-color: red;
+  }
+
+.ng-valid.ng-dirty {
+  border-color: green;
+  }
+  
+  /* ---------------------------NUEVAS PROPIEDADES DE LA PANTALLA PARA LAS SALAS - INICIO--------------------------- */
+
+
+h2{
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size:3em !important;
+  margin: 1.7em 1em 0.8em 0.5em !important;
+  border-bottom: #000 solid thin;
+  color: #333 !important; 
+  text-shadow:1px 1px 0 #CCC, 2px 2px 0 #CCC; /* sombra en dos niveles de gris */
+  }
+
+#contenedor-ptsala {
+  margin-top: 1em;
+  margin-right: 30px;
+  margin-left: 30px;
+  float:right;
+  padding: 0.1em;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.5);
+  border-radius: 0.4em;
+  border-bottom: 1px solid #fbfbfb;
+  border-top: 1px solid #fbfbfb;
+  font-size:0.9em !important;
+  }
+
+.descipevento {
+  font-family: 'Open Sans', sans-serif;
+  font-size:2em !important;
+  line-height: 1.3em;
+  margin: 0 0 2em 2em !important;
+  }
+
+.listeventos {  }
+
+.listeventos ul {
+  list-style:none;
+  }
+  
+.listeventos ul li {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size:1.3em;
+  background: #e5e5e5; 
+  background: -moz-linear-gradient(left,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to right,  #e5e5e5 0%,#ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+  border-left:5px solid #F63;
+  padding:20px;
+  margin:15px;
+  text-decoration:none;
+  color:#000;
+ -moz-transform:rotate(-2deg);
+ -moz-box-shadow:1px 1px 3px #999999;
+  -webkit-transform:rotate(-2deg);
+  -webkit-box-shadow: 1px 1px 3px #999999;
+  transform:rotate(-2deg);
+  box-shadow: 1px 1px 3px #999999;
+  }
+  
+.titupevent {
+  font-family: 'Open Sans', sans-serif;
+  font-size:1.7em !important;
+  margin: 0em 0em 0.7em 0em !important;
+  border-top: #000 solid thin;
+  color: #333 !important; 
+  text-shadow:1px 1px 0 #CCC; /* sombra en dos niveles de gris */
+  }
+
+.logo-ptsala {
+  display: block;
+  margin: 4em 0 0 10em;
+  max-width: 50%;
+  position: relative;¡
+  }
+
+.contenedor-circ {
+  position: relative;
+  top: 2em;
+  width: 25em;
+  margin: 0 auto;
+  }
+
+.circulo-sievento {
+  position: absolute;
+  display:block;
+  width: 300px;
+  height: 300px;
+  border: 20px solid;
+  border-radius: 50%;
+  border-color: #0c3;
+  z-index: 1;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%, rgba(255,255,255,0.86) 39%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,rgba(255,255,255,1)), color-stop(39%,rgba(255,255,255,0.86)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+  -webkit-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  -moz-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  }
+  
+.circulo-noevento {
+  position: absolute;
+  display:block;
+  width: 300px;
+  height: 300px;
+  border: 20px solid;
+  border-radius: 50%;
+  border-color: #C00;
+  z-index: 1;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%, rgba(255,255,255,0.86) 39%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,rgba(255,255,255,1)), color-stop(39%,rgba(255,255,255,0.86)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+  -webkit-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  -moz-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  }
+
+.anima {
+  opacity: 0.1;
+  position: static;
+  animation: animado 5s infinite;
+  animation-delay: 1s;
+  z-index: 1;
+  }
+  
+@keyframes animado {
+  0% {transform: scale(1,1) ; opacity: 0.2;}
+  50% {transform: scale(3,3) ; opacity: 0;}
+}
+
+.ptsala-hora-actual {
+  position: absolute;
+  z-index: 2;
+  top: 5.5em;
+  left: 3.5em;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #333;
+  animation: none;
+  text-align:center;
+  width: 60%;
+  }
+
+.hora-ptsala {
+  font-size:4em;
+  }
+
+.fecha-ptsala {
+  font-size:2em;
+  }
+
+.estadosala {
+	display:block;
+  }
+  
+  /* ---------------------------NUEVAS PROPIEDADES DE LA PANTALLA PARA LAS SALAS - INICIO--------------------------- */
+
+
+h2{
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size:3em !important;
+  margin: 1.7em 1em 0.8em 0.5em !important;
+  border-bottom: #000 solid thin;
+  color: #333 !important; 
+  text-shadow:1px 1px 0 #CCC, 2px 2px 0 #CCC; /* sombra en dos niveles de gris */
+  }
+
+#contenedor-ptsala {
+  margin-top: 1em;
+  margin-right: 30px;
+  margin-left: 30px;
+  float:right;
+  padding: 0.1em;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255, 0.5);
+  border-radius: 0.4em;
+  border-bottom: 1px solid #fbfbfb;
+  border-top: 1px solid #fbfbfb;
+  font-size:0.9em !important;
+  width:100% !important;	
+  }
+
+.descipevento {
+  font-family: 'Open Sans', sans-serif;
+  font-size:2em !important;
+  line-height: 1.3em;
+  margin: 0 0 2em 2em !important;
+  }
+.thumb-ptsala {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: block;
+  line-height: 1.42857;
+  margin-bottom: 20px;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+  }
+
+.thumb-ptsala p{
+  margin: 0 0 0 1em;
+  }
+
+.listeventos {  }
+
+.listeventos ul {
+  list-style:none;
+  }
+  
+.listeventos ul li {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size:1.3em;
+  background: #e5e5e5; 
+  background: -moz-linear-gradient(left,  #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to right,  #e5e5e5 0%,#ffffff 100%); /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+  border-left:5px solid #F63;
+  padding:20px;
+  margin:15px;
+  text-decoration:none;
+  color:#000;
+ -moz-transform:rotate(-2deg);
+ -moz-box-shadow:1px 1px 3px #999999;
+  -webkit-transform:rotate(-2deg);
+  -webkit-box-shadow: 1px 1px 3px #999999;
+  transform:rotate(0deg);
+  box-shadow: 1px 1px 3px #999999;
+  }
+  
+.titupevent {
+  font-family: 'Open Sans', sans-serif;
+  font-size:1.7em !important;
+  margin: 0em 0em 0.7em 0em !important;
+  border-top: #000 solid thin;
+  color: #333 !important; 
+  text-shadow:1px 1px 0 #CCC; /* sombra en dos niveles de gris */
+  }
+
+.logo-ptsala {
+  margin-left: 13em;
+  margin-right: auto;
+  max-width: 50%;
+  position: relative;
+  }
+
+.contenedor-circ {
+  position: relative;
+  top: 2em;
+  width: 25em;
+  margin: 0 auto;
+  }
+
+.circulo-sievento {
+  position: absolute;
+  display:block;
+  width: 300px;
+  height: 300px;
+  border: 20px solid;
+  border-radius: 50%;
+  border-color: #0c3;
+  z-index: 1;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%, rgba(255,255,255,0.86) 39%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,rgba(255,255,255,1)), color-stop(39%,rgba(255,255,255,0.86)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+  -webkit-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  -moz-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  }
+  
+.circulo-noevento {
+  position: absolute;
+  display:block;
+  width: 300px;
+  height: 300px;
+  border: 20px solid;
+  border-radius: 50%;
+  border-color: #C00;
+  z-index: 1;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%, rgba(255,255,255,0.86) 39%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,rgba(255,255,255,1)), color-stop(39%,rgba(255,255,255,0.86)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 29%,rgba(255,255,255,0.86) 39%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
+  -webkit-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  -moz-box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  box-shadow: inset 0px 0px 25px 2px rgba(0,0,0,0.49);
+  }
+
+.anima {
+  opacity: 0.1;
+  position: static;
+  animation: animado 5s infinite;
+  animation-delay: 1s;
+  z-index: 1;
+  }
+
+.noanima {
+  position: relative !important;
+  z-index: 1;
+  }
+  
+@keyframes animado {
+  0% {transform: scale(1,1) ; opacity: 0.2;}
+  50% {transform: scale(3,3) ; opacity: 0;}
+}
+
+.ptsala-hora-actual {
+  position: absolute;
+  z-index: 2;
+  top: 5.5em;
+  left: 3.5em;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #333;
+  animation: none;
+  text-align:center;
+  width: 60%;
+  }
+
+.hora-ptsala {
+  font-size:4em;
+  }
+
+.fecha-ptsala {
+  font-size:2em;
+  }
+
+.estadosala {
+	display:block;
+  }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TVIDI Información</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/turquesa.css"> <!--Se podría modificar el tema cambiando las css por las pertenecientes a los temas: blanco, negrita, naranjas, negro, aeropuerto, fractalia, cielo, computers, gente, lomas, reunion, turquesa-->
+
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./config.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="tvidiApp">
+
+<div class="container" ng-controller="Salav2Controller">
+    
+   <div class="page-header">
+      <h1>Sala {{ sala.nombre }}</h1>
+
+   </div>
+
+    <div id="contenedor-ptsala">
+
+        <div class="col-md-6">
+
+            <div class="estadosala">
+                <div class="contenedor-circ">
+                    <div ng-class="sala.enCurso? 'circulo-noevento' : 'circulo-sievento'"></div> <!--hay que cambiar la clase para modificar el color del círculo, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
+                    <div ng-class="sala.enCurso? 'circulo-noevento anima' : 'circulo-sievento anima'"></div><!--hay que cambiar la clase para modificar el color de la animación, de tal forma que la clase circulo-sievento muestra el círculo en verde y la clase circulo-noevento muestra en círculo en rojo-->
+                    <div class="ptsala-hora-actual"><p  class="hora-ptsala">{{ stringTime }}</p><p class="fecha-ptsala">{{ stringDate }}</p></div>
+                </div>
+            </div>
+            <img ng-src="{{ evento0.url_imagen }}" alt="{{ evento0.cliente }}"  class="logo-ptsala" /><!--Logo de tamaño 500x190 del evento optimizado para png transparente con el escalado forzado por las css -->
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="sala-hora"><p>{{ evento0.hora }}</p></div>
+            <div class="thumb-ptsala">
+                <h2 class="ptsala">{{ evento0.cliente }}</h2>
+                <div><p class="descipevento">{{ evento0.descripcion }}</p></div>
+                <!--<div class="titupevent"><p>Próximos eventos:</p></div>-->
+                <div class="listeventos">
+                    <ul ng-repeat="evento in eventosSiguientes">
+                        <li>{{ evento.hora }} - {{ evento.cliente }} - {{ evento.descripcion }}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p class="text-muted">Fractalia</p>
+    </div>
+</div>
+
+
+</body>
+
+</html>

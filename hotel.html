@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TVIDI Información</title>
 
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/turquesa.css">
+
     <!-- Bootstrap -->
-    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./config.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/app.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,36 +25,42 @@
 </head>
 <body ng-app="tvidiApp">
 
-<div class="container" ng-controller="GeneralController">
+<div class="container" ng-controller="HotelController">
     <div class="page-header">
-        <h1>Hotel {{salas.nombreHotel}}</h1>
+        <h1>{{ data.nombreHotel }}</h1>
     </div>
 
+    <div ng-show="data.error" class="alert alert-danger"> <span class="glyphicon glyphicon-warning-sign"></span>{{ data.message }}</div>
+
+    <div id="clock">{{ stringDate }} - {{ stringTime }}</div>
+
     <table class="table">
-        <tr>
+        <tr id="head_table">
             <th>Sala</th>
             <th>Cliente</th>
             <th>Reunión</th>
+            <th>Hora</th>
         </tr>
-        <tr ng-repeat="sala in hotel.salas">
-            <td>{{ sala.nombreSala  }}</td>
-            <td>{{ sala.cliente }}</td>
-            <td>{{ sala.reunion }}</td>
-        </tr>
-    </table>
 
+        <tr>
+
+        <tr ng-repeat="sala in data.salas">
+            <td>{{ sala.nombre }}</td>
+            <td>{{ sala.cliente }}</td>
+            <td>{{ sala.descripcion }}</td>
+            <td>{{ sala.hora }}</td>
+        </tr>
+
+    </table>
 
     <div class="footer">
         <div class="container">
-            <p class="text-muted">created by yuido.com</p>
+            <p class="text-muted">Powered by Fractalia</p>
         </div>
     </div>
 
 </div>
 
-<script src="./bower_components/angular/angular.min.js"></script>
-<script src="./bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
-<script src="./app/app.js"></script>
 
 </body>
 </html>
