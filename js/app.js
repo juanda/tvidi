@@ -1,21 +1,3 @@
-/**
- protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        WebView webView = (WebView) findViewById(R.id.webView);
-
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
-        if(android.os.Build.VERSION.SDK_INT >= 16) {
-            webSettings.setAllowUniversalAccessFromFileURLs(true);
-        }
-
-        webView.loadUrl("file:///android_asset/tvidi/app.html");
-    }
- */
-
 'use strict';
 
 function capitalizeEachWord(str) {
@@ -35,56 +17,56 @@ var changeStyle = function () {
     link.href = 'css/' + settings.style + '.css'
 }
 
-changeStyle();
+var timeRefresh = (settings.timeRefresh == undefined)? 300000: settings.timeRefresh * 60000;
+
+var getDate = function(){
+    var date = new Date();
+    var options = { weekday: "long",  month: "long", day: "numeric" };
+    var stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
+
+    return stringDate;
+};
+
+var getTime = function(){
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+
+    var stringTime =  h + ":" + m;// + ":" + s;
+
+    return stringTime;
+};
+
 
 var tvidiApp = angular.module('tvidiApp', []);
+
 
 tvidiApp.controller('HotelController', [
     '$scope',
     '$http',
     '$interval',
     function($scope, $http, $interval){
-
         $scope.settings = settings;
-
-        var apiUrl  = $scope.settings.apiUrl;
-        var apiKey  = $scope.settings.apiKey;
-        var idHotel = $scope.settings.idHotel;
-        var antelacion = $scope.settings.antelacion;
-        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
-
-        var date = new Date();
-        var options = { weekday: "long",  month: "long", day: "numeric" };
-        $scope.stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
-
-
+        $scope.stringDate = getDate();
         $scope.getTime = function(){
-            var today=new Date();
-            var h=today.getHours();
-            var m=today.getMinutes();
-            var s=today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-
-            $scope.stringTime =  h + ":" + m;// + ":" + s;
+            $scope.stringTime =  getTime();
         };
-
         $scope.data = {
             error: false,
             nombreHotel: ""
         };
-
         $scope.getSalas = function(){
 
-
-            var url     = apiUrl + '/hotel/' + idHotel  + '/' + antelacion + '/' + apiKey;
-            
+            var url = settings.apiUrl + '/hotel/' + settings.idHotel  + '/' + settings.antelacion + '/' + settings.apiKey;
 
             $http.get(url)
                 .success(function (data) {
                     $scope.data = data;
-                    console.log(url);
-                    console.log(data);
+
+                    console.log($scope.data);
                 })
                 .error(function (e) {
                     $scope.data = {error: true, message: 'Error al acceder a los datos del hotel'}
@@ -103,38 +85,17 @@ tvidiApp.controller('SalaController', [
     '$http',
     '$interval',
     function($scope, $http, $interval){
-
         $scope.settings = settings;
-
-        var apiUrl  = $scope.settings.apiUrl;
-        var apiKey  = $scope.settings.apiKey;
-        var idHotel = $scope.settings.idHotel;
-        var idSala  = $scope.settings.idSala;
-        var antelacion = $scope.settings.antelacion;
-        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
-
-        var date = new Date();
-        var options = { weekday: "long",  month: "long", day: "numeric" };
-        $scope.stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
-
+        $scope.stringDate = getDate();
         $scope.getTime = function(){
-            var today=new Date();
-            var h=today.getHours();
-            var m=today.getMinutes();
-            var s=today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-
-            $scope.stringTime =  h + ":" + m;// + ":" + s;
+            $scope.stringTime =  getTime();
         };
-
         $scope.data = {
             error: false,
             nombre: ""
         };
-
         $scope.getDatosSala = function () {
-            var url     = apiUrl + '/sala'  + '/' + idSala + '/' + apiKey ;
+            var url     = settings.apiUrl + '/sala'  + '/' + settings.idSala + '/' + settings.apiKey ;
 
             $http.get(url)
                 .success(function(data){
@@ -157,50 +118,17 @@ tvidiApp.controller('Salav2Controller', [
     '$http',
     '$interval',
     function($scope, $http, $interval){
-
         $scope.settings = settings;
-
-        var apiUrl  = $scope.settings.apiUrl;
-        var apiKey  = $scope.settings.apiKey;
-        var idHotel = $scope.settings.idHotel;
-        var idSala  = $scope.settings.idSala;
-        var antelacion = $scope.settings.antelacion;
-        var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
-
-        var date = new Date();
-        var options = { weekday: "long",  month: "long", day: "numeric" };
-        $scope.stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
-
+        $scope.stringDate = getDate();
         $scope.getTime = function(){
-            var today=new Date();
-            var h=today.getHours();
-            var m=today.getMinutes();
-            var s=today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-
-            $scope.stringTime =  h + ":" + m;// + ":" + s;
+            $scope.stringTime =  getTime();
         };
-
-
         $scope.data = {
             error: false,
             nombre: ""
         };
-
-        $scope.getTime = function(){
-            var today=new Date();
-            var h=today.getHours();
-            var m=today.getMinutes();
-            var s=today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-
-            $scope.stringTime =  h + ":" + m;// + ":" + s;
-        };
-
         $scope.getDatosSala = function () {
-            var url     = apiUrl + '/salav2' + '/' + idSala + '/' + antelacion  + '/' + apiKey ;
+            var url     = settings.apiUrl + '/salav2' + '/' + settings.idSala + '/' + settings.antelacion  + '/' + settings.apiKey ;
 
            
             $http.get(url)
@@ -227,3 +155,5 @@ tvidiApp.controller('Salav2Controller', [
         $interval($scope.getTime, 500);
     }
 ]);
+
+changeStyle();
