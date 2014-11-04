@@ -32,7 +32,7 @@
 
     <div ng-show="data.error" class="alert alert-danger"> <span class="glyphicon glyphicon-warning-sign"></span>{{ data.message }}</div>
 
-    <div id="clock"></div>
+    <div id="clock">{{ stringDate }} - {{ stringTime }}</div>
 
     <table class="table">
         <tr id="head_table">
@@ -62,6 +62,5 @@
 </div>
 
 
-<script src="./js/clock.js"></script>
 </body>
 </html>

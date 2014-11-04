@@ -18,6 +18,18 @@
 
 'use strict';
 
+function capitalizeEachWord(str) {
+    return str.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
+var time = '';
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
 var changeStyle = function () {
     var link = document.getElementsByTagName('link').item(0);
     link.href = 'css/' + settings.style + '.css'
@@ -40,6 +52,22 @@ tvidiApp.controller('HotelController', [
         var idHotel = $scope.settings.idHotel;
         var antelacion = $scope.settings.antelacion;
         var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
+
+        var date = new Date();
+        var options = { weekday: "long",  month: "long", day: "numeric" };
+        $scope.stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
+
+
+        $scope.getTime = function(){
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+
+            $scope.stringTime =  h + ":" + m;// + ":" + s;
+        };
 
         $scope.data = {
             error: false,
@@ -66,6 +94,7 @@ tvidiApp.controller('HotelController', [
 
         $scope.getSalas();
         $interval($scope.getSalas, timeRefresh);
+        $interval($scope.getTime, 500);
     }
 ]);
 
@@ -84,6 +113,20 @@ tvidiApp.controller('SalaController', [
         var antelacion = $scope.settings.antelacion;
         var timeRefresh = ($scope.settings.timeRefresh == undefined)? 300000: $scope.settings.timeRefresh * 60000;
 
+        var date = new Date();
+        var options = { weekday: "long",  month: "long", day: "numeric" };
+        $scope.stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
+
+        $scope.getTime = function(){
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+
+            $scope.stringTime =  h + ":" + m;// + ":" + s;
+        };
 
         $scope.data = {
             error: false,
@@ -105,33 +148,9 @@ tvidiApp.controller('SalaController', [
 
         $scope.getDatosSala();
         $interval($scope.getDatosSala, timeRefresh);
+        $interval($scope.getTime, 500);
     }
 ]);
-
-function capitalizeEachWord(str) {
-    return str.replace(/\w\S*/g, function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
-
-var time = '';
-function startTime() {
-    var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-
-    time =  h + ":" + m;
-}
-
-function checkTime(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-
-startTime();
 
 tvidiApp.controller('Salav2Controller', [
     '$scope',
@@ -151,6 +170,17 @@ tvidiApp.controller('Salav2Controller', [
         var date = new Date();
         var options = { weekday: "long",  month: "long", day: "numeric" };
         $scope.stringDate = capitalizeEachWord(date.toLocaleDateString("es-ES", options));
+
+        $scope.getTime = function(){
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+
+            $scope.stringTime =  h + ":" + m;// + ":" + s;
+        };
 
 
         $scope.data = {
